@@ -44,19 +44,47 @@
 
 
 // 5. Find the intersection of two arrays
-function arrayIntersections(arr1, arr2){
-    var counElement = 0;
-    var newArr = [];
-  for(let i=0; i<=arr1.length; i++){
-    for(let j=0; j <= arr2.length; j++){
+// function arrayIntersections(arr1, arr2){
+//     var counElement = 0;
+//     var newArr = [];
+//   for(let i=0; i<=arr1.length; i++){
+//     for(let j=0; j <= arr2.length; j++){
          
-        if(arr1[i] === arr2[j]){
-            counElement++;
-            break;
+//         if(arr1[i] === arr2[j]){
+//             counElement++;
+//             break;
+//         }
+//         newArr.push(counElement);
+//     }
+//   }
+//   return newArr;
+// }
+// console.log(arrayIntersections([1,2,3,4],[3,4,5,6]));
+
+
+function arrayIntersections(arr1, arr2) {
+    let newArr = [];
+    
+    for (let i = 0; i < arr1.length; i++) {
+        for (let j = 0; j < arr2.length; j++) {
+            if (arr1[i] === arr2[j]) {
+                // Check if already added to avoid duplicates
+                let isDuplicate = false;
+                for (let k = 0; k < newArr.length; k++) {
+                    if (newArr[k] === arr1[i]) {
+                        isDuplicate = true;
+                        break;
+                    }
+                }
+                if (!isDuplicate) {
+                    newArr.push(arr1[i]);
+                }
+                break; // Stop checking after first match
+            }
         }
-        newArr.push(counElement);
     }
-  }
-  return newArr;
+    
+    return newArr;
 }
-console.log(arrayIntersections([1,2,3,4],[3,4,5,6]));
+
+console.log(arrayIntersections([1, 2, 3, 4], [3, 4, 5, 6]));
