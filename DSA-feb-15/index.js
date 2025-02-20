@@ -1,64 +1,64 @@
 // Find the target of index element
-// var arr = [1,2,3,4,5,6];
-// var target = 1;
+var arr = [1,2,3,4,5,6];
+var target = 1;
 
-// function findTarget(){
-// var left = 0;
-// var right = arr.length-1;
+function findTarget(){
+var left = 0;
+var right = arr.length-1;
 
-// while(left <= right){
-//     var midIndex = Math.floor((left + right)/2);
-//     var indexEle = arr[midIndex];
+while(left <= right){
+    var midIndex = Math.floor((left + right)/2);
+    var indexEle = arr[midIndex];
     
-//     if(target == indexEle){
-//         return arr[midIndex];
-//     }else if(target > indexEle){
-//         left = midIndex + 1;
-//     }else {
-//         right = midIndex - 1;
-//     }
-// }
-// return "Not found";
-// }
-// console.log(findTarget()); 
+    if(target == indexEle){
+        return arr[midIndex];
+    }else if(target > indexEle){
+        left = midIndex + 1;
+    }else {
+        right = midIndex - 1;
+    }
+}
+return "Not found";
+}
+console.log(findTarget()); 
 
 
 // Find the second smallest number of array 
 
-// function smaller(arr){
-//   let lower = secondSmaller = arr[0];
+function smaller(arr){
+  let lower = secondSmaller = arr[0];
 
-//   for(let i=0; i<arr.length; i++){
+  for(let i=0; i<arr.length; i++){
 
-//       if(arr[i] < lower){
-//           secondSmaller = lower;
-//           lower = arr[i];
-//       } else if(secondSmaller !== 0 && arr[i] < secondSmaller){
-//           secondSmaller = arr[i];
-//       }
-//   }
-//   return secondSmaller;
-// }
-
+      if(arr[i] < lower){
+          secondSmaller = lower;
+          lower = arr[i];
+      } else if(secondSmaller !== 0 && arr[i] < secondSmaller){
+          secondSmaller = arr[i];
+      }
+  }
+  return secondSmaller;
+}
+console.log(smaller([4,3,7,10,1,22]));
 
 
 //Reverse words in sentence
-// function reverseWords(sentence){
-// var word = ""; //for store each charachter of sentence temporary
-// var result = ""; //store reversed sentence
+function reverseWords(sentence){
+var word = ""; //for store each charachter of sentence temporary
+var result = ""; //store reversed sentence
 
-// for(var i=0; i<=sentence.length; i++){
+for(var i=0; i<=sentence.length; i++){
   
-//   if(i < sentence.length && sentence[i] !== ' '){
-//     word = sentence[i] + word;
-//   }else {
-//     result += word + (i < sentence.length ? ' ' : '');
-//     word = "";
-//   }
-// }
-// return result;
-// } 
-// console.log(reverseWords("hello world"));
+  if(i < sentence.length && sentence[i] !== ' '){
+    word = sentence[i] + word;
+  }else {
+    result += word + (i < sentence.length ? ' ' : '');
+    word = "";
+  }
+}
+return result;
+} 
+console.log(reverseWords("hello world"));
 
 // reverse words with another input
 // function reverseTwo(sentence2){
@@ -81,40 +81,40 @@
 
 
 // find the missing Number 
-// function findMissinNumber(arr, n, l){
-//     var l = arr.length;
-//     var n = 5;
-//     var actualSum = 0;
+function findMissinNumber(arr, n, l){
+    var l = arr.length;
+    var n = 5;
+    var actualSum = 0;
 
-//  var expectSum = (n *(n+1))/2;
-// //  console.log(expectSum);
-// for(var i=0; i<l; i++){
-//    actualSum += arr[i];
-// }
-// return actualSum - expectSum;
-// }
-// console.log(findMissinNumber([1,2,4,5]));
+ var expectSum = (n *(n+1))/2;
+//  console.log(expectSum);
+for(var i=0; i<l; i++){
+   actualSum += arr[i];
+}
+return actualSum - expectSum;
+}
+console.log(findMissinNumber([1,2,4,5]));
 
 
 
 
 // implement a string compression algorithm to count the repeat character 
-// function compressString(str){
-// var compressed = "";
-// var count = 1;
+function compressString(str){
+var compressed = "";
+var count = 1;
 
-// for(var i=0; i<str.length; i++){
-//   if(str[i] === str[i + 1]){
-//     count++;
+for(var i=0; i<str.length; i++){
+  if(str[i] === str[i + 1]){
+    count++;
   
-//   }else {
-//   compressed += str[i] + (count > 1 ? count : '');
-//   count = 1;
-//   }
-// }
-// return compressed.length < str.length ? compressed : str;
-// }
-// console.log(compressString("aaabbcddd"));
+  }else {
+  compressed += str[i] + (count > 1 ? count : '');
+  count = 1;
+  }
+}
+return compressed.length < str.length ? compressed : str;
+}
+console.log(compressString("aaabbcddd"));
 
 
 
