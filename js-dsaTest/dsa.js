@@ -75,7 +75,6 @@ function findMissinNumber(arr, n) {
 }
 console.log(findMissinNumber([0, 1, 2, 4, 5]));
 
-
 // 4. Merge two sorted Array
 function MergeAray(arr1, arr2) {
   var newArr = [];
@@ -103,7 +102,6 @@ function MergeAray(arr1, arr2) {
 }
 console.log(MergeAray([1, 3, 5], [2, 4, 6]));
 
-
 function MergeAray(arr1, arr2) {
     var newArr = [];
     var i = 0;
@@ -129,17 +127,15 @@ function MergeAray(arr1, arr2) {
     return newArr;
   }
   console.log(MergeAray([0, 8, 10], [1, 9, 11]));
-  
 
 //5. Longest substring without repeating characters
 function LongestSubstr(str){
 var strCount = 0;
 
-
-}  
+}
 console.log(LongestSubstr("abcabcbb"));
 
-// 6. Two sum Problem 
+// 6. Two sum Problem
 function TwoSum(num){
 var indexStore = [];
 
@@ -156,17 +152,16 @@ return indexStore;
 var target = 9;
 console.log(TwoSum([2, 7, 11, 15]));
 
-
 function sunTwo2(num2){
   var storeInd = [];
 
   for (let i = 0; i < num2.length; i++) {
     for (let j = i+1; j < num2.length; j++) {
-    
+
       if(num2[i] + num2[j] === target2){
           storeInd.push(i, j);
       }
-    } 
+    }
  }
  return storeInd;
 }
@@ -174,22 +169,55 @@ var target2 = 6;
 console.log(sunTwo2([3, 2, 4]));
 
 
-
-// 7. find the Intersection of two array 
-function findIntersection(num){
+// 7. find the Intersection of two array
+function findIntersection(num1,num2){
 var storeCommon = [];
 
-for(let i=0; i < num.length; i++){
-  for(let j=i+1; j < num.length; j++){
-     
-    if(num[i] == num[j]){
-      if(num[i], num[j] === 1){
-        storeCommon.push(num[i], num[j]);
-      break;
-      }
+for(let i=0; i < num1.length; i++){
+  for(let j=0; j < num2.length-1; j++){
+
+    if(num1[i] == num2[j]){
+    storeCommon.push(num1[i]);
+     break;
     }
   }
 }
 return storeCommon;
 }
 console.log(findIntersection([1,2,2,1],[2,2]));
+
+function Intersection2(a, b) {
+  var newArray = [];
+
+  for (var i = 0; i < a.length; i++) {
+    for (var j = 0; j < a.length - 1; j++) {
+      if (a[i] == b[j]) {
+        newArray.push(a[i]);
+        break;
+      }
+    }
+  }
+  return newArray;
+}
+console.log(Intersection2([4, 9, 5], [9, 4, 9, 8, 4]));
+
+
+// 8. Miximum subarray 
+var numberkar = [-2,1,-3,4,-1,2,1,-5,4];
+function sum(arr){
+    var maxinum = 0;
+    var sum = 0;
+
+    for (let i = 0; i < numberkar.length; i++) {
+        sum = sum + numberkar[i];
+        
+        if(maxinum < sum){
+            maxinum = sum;
+        }
+        if(sum < 0){
+            sum = 0;
+        }
+    }
+    return maxinum;
+}
+console.log(sum(numberkar));
