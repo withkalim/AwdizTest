@@ -1,0 +1,31 @@
+1. What is React. how does if differ from other js framework. 
+ans: react is library for build user interface web application. becuse of it's library it can choose list of pre-difiine package. other hand framework is architecter of structer of build web application with set of rule and guidence.
+
+2. Explain the virtual DOM and how react uses it for rendering.
+ans: virtual dom is another copy of actual dom in html. and in react is use for compare to actual dom by update virtual and apply neccessary changes to react dom.
+
+3. what is jsx. and why it used in react.
+ans: jsx is extension of file for work with html and js. by use it makes our componet more describle.
+
+4. what is hook and why were they introduce
+ans: in react hooks are pre-defined. it's use for do activities with our data in component to another component.
+
+5. explain difference between useState , useEffect and useRef
+ans: all of are react hooks. useState used for store any data inside it and used it. useEffect hook work when page reloade and component rerender inside the useEffect code executed. useRef create for give reference to input value.
+
+6. what is context Api and how is used 
+ans: context api allow to manage and share data any component without use prop driling. and it provide way to create global or local data store tha can used any component.
+
+7.what is highe order components and when should we use it
+ans: highe order component take another component is an props. it's used when we want to wrap children component and used it in app.js as a provider.
+
+8. what is prop drilling and how can avoide it
+ans: prop drilling is reference to share data to multi component just use useParams inside the reciver component. we can avoide it by use context api use for send data to any component without use prop drilling.
+
+9. explain difference between functional and class component
+ans: the functional component is javaScript functions it return jsx code. and while class component introduced in ES6. and it has redner method also.
+
+10. how does react optimize rendering use memoization react.memo, useMemo and useCallback
+ans: react.memo memorise component values and useMemo is memorise the props of component and useCallback memorise the functional re-render they all are prevent the unneccessery re-rendring of component.
+
+
