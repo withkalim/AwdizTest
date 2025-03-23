@@ -11,3 +11,35 @@ code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
 }
+
+ .button-container {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  width: 100%;
+  border-top: 1px solid #ddd;
+  padding: 15px 0;
+  position: fixed;
+ bottom: 0%;
+}
+
+.add-to-cart {
+  flex: 1;
+  background: white;
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  height: 55px;
+}
+
+.buy-now {
+  flex: 1;
+  background: #FFC107; /* Yellow color */
+  border: none;
+  font-size: 16px;
+  font-weight: bold;
+  cursor: pointer;
+  padding: 10px;
+  height: 55px;
+}
